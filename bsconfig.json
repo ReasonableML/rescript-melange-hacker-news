@@ -1,0 +1,27 @@
+
+{
+  "name": "rescript-melange-hacker-news",
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "reason": {
+    "react-jsx": 3
+  },
+  "bs-dependencies": [
+    "@rescript/react",
+    "bs-fetch",
+    "@glennsl/bs-json",
+    "bs-webapi"
+  ],
+  "sources": [
+    {
+      "dir": "src"
+    },{
+      "dir": "src/bindings"
+    }
+  ]
+}

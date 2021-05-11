@@ -1,0 +1,1563 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir ./node_modules/@rescript/react/src
+(dirs :standard legacy)
+(rule
+(targets  React.ast)
+ (deps (:inputs  React.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  React.cmj React.cmi React.cmt React.bs.js)
+ (mode (promote (until-clean) (only React.bs.js)))(deps (:inputs  React.ast)  (:ast_deps .././src/React.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o React.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.ast)
+ (deps (:inputs  ReactDOM.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.cmj ReactDOM.cmi ReactDOM.cmt ReactDOM.bs.js)
+ (mode (promote (until-clean) (only ReactDOM.bs.js)))(deps (:inputs  ReactDOM.ast)  (:ast_deps .././src/ReactDOM.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o ReactDOM.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.ast)
+ (deps (:inputs  ReactEvent.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.iast)
+ (deps (:inputs  ReactEvent.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmi ReactEvent.cmti)
+ (deps (:inputs  ReactEvent.iast)  (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o ReactEvent.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmj ReactEvent.cmt ReactEvent.bs.js)
+ (mode (promote (until-clean) (only ReactEvent.bs.js)))(deps (:inputs  ReactEvent.ast)  ReactEvent.cmi (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o ReactEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.ast)
+ (deps (:inputs  ReactDOMStyle.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.cmj ReactDOMStyle.cmi ReactDOMStyle.cmt ReactDOMStyle.bs.js)
+ (mode (promote (until-clean) (only ReactDOMStyle.bs.js)))(deps (:inputs  ReactDOMStyle.ast)  (:ast_deps .././src/ReactDOMStyle.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o ReactDOMStyle.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.ast)
+ (deps (:inputs  ReactDOMServer.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.cmj ReactDOMServer.cmi ReactDOMServer.cmt ReactDOMServer.bs.js)
+ (mode (promote (until-clean) (only ReactDOMServer.bs.js)))(deps (:inputs  ReactDOMServer.ast)  (:ast_deps .././src/ReactDOMServer.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o ReactDOMServer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.ast)
+ (deps (:inputs  ReactTestUtils.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.iast)
+ (deps (:inputs  ReactTestUtils.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmi ReactTestUtils.cmti)
+ (deps (:inputs  ReactTestUtils.iast)  (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o ReactTestUtils.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmj ReactTestUtils.cmt ReactTestUtils.bs.js)
+ (mode (promote (until-clean) (only ReactTestUtils.bs.js)))(deps (:inputs  ReactTestUtils.ast)  ReactTestUtils.cmi (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o ReactTestUtils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.ast)
+ (deps (:inputs  RescriptReactRouter.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.iast)
+ (deps (:inputs  RescriptReactRouter.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.cmi RescriptReactRouter.cmti)
+ (deps (:inputs  RescriptReactRouter.iast)  (:ast_deps .././src/RescriptReactRouter.ast .././src/RescriptReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o RescriptReactRouter.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.cmj RescriptReactRouter.cmt RescriptReactRouter.bs.js)
+ (mode (promote (until-clean) (only RescriptReactRouter.bs.js)))(deps (:inputs  RescriptReactRouter.ast)  RescriptReactRouter.cmi (:ast_deps .././src/RescriptReactRouter.ast .././src/RescriptReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o RescriptReactRouter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.ast)
+ (deps (:inputs  RescriptReactErrorBoundary.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.iast)
+ (deps (:inputs  RescriptReactErrorBoundary.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.cmi RescriptReactErrorBoundary.cmti)
+ (deps (:inputs  RescriptReactErrorBoundary.iast)  (:ast_deps .././src/RescriptReactErrorBoundary.ast .././src/RescriptReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o RescriptReactErrorBoundary.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.cmj RescriptReactErrorBoundary.cmt RescriptReactErrorBoundary.bs.js)
+ (mode (promote (until-clean) (only RescriptReactErrorBoundary.bs.js)))(deps (:inputs  RescriptReactErrorBoundary.ast)  RescriptReactErrorBoundary.cmi (:ast_deps .././src/RescriptReactErrorBoundary.ast .././src/RescriptReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.bs.js -o RescriptReactErrorBoundary.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  RescriptReactErrorBoundary.bs.js RescriptReactRouter.bs.js ReactTestUtils.bs.js ReactDOMServer.bs.js ReactDOMStyle.bs.js ReactEvent.bs.js ReactDOM.bs.js React.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/@rescript/react/src/legacy
+(rule
+(targets  ReactDOMRe.ast)
+ (deps (:inputs  ReactDOMRe.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMRe.cmj ReactDOMRe.cmi ReactDOMRe.cmt ReactDOMRe.bs.js)
+ (mode (promote (until-clean) (only ReactDOMRe.bs.js)))(deps (:inputs  ReactDOMRe.ast)  (:ast_deps ../.././src/legacy/ReactDOMRe.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src/legacy %{ast_deps}) (run bsc -I . -I ..    -w a -bs-package-name @rescript/react -bs-package-output es6:./src/legacy:.bs.js -o ReactDOMRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.ast)
+ (deps (:inputs  ReasonReact.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.cmj ReasonReact.cmi ReasonReact.cmt ReasonReact.bs.js)
+ (mode (promote (until-clean) (only ReasonReact.bs.js)))(deps (:inputs  ReasonReact.ast)  (:ast_deps ../.././src/legacy/ReasonReact.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@rescript/react -cwd ./src/legacy %{ast_deps}) (run bsc -I . -I ..    -w a -bs-package-name @rescript/react -bs-package-output es6:./src/legacy:.bs.js -o ReasonReact.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReasonReact.bs.js ReactDOMRe.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/@rescript/react(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/@rescript/react/.melange.eobjs)
+
+(subdir ./node_modules/bs-fetch/src
+(rule
+(targets  Fetch.ast)
+ (deps (:inputs  Fetch.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch.iast)
+ (deps (:inputs  Fetch.mli) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch.cmi Fetch.cmti)
+ (deps (:inputs  Fetch.iast)  (:ast_deps .././src/Fetch.ast .././src/Fetch.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-fetch -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Fetch.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch.cmj Fetch.cmt Fetch.bs.js)
+ (mode (promote (until-clean) (only Fetch.bs.js)))(deps (:inputs  Fetch.ast)  Fetch.cmi (:ast_deps .././src/Fetch.ast .././src/Fetch.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-fetch -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name bs-fetch -bs-package-output es6:./src:.bs.js -o Fetch.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  bs_fetch.ast)
+ (deps (:inputs  bs_fetch.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  bs_fetch.cmj bs_fetch.cmi bs_fetch.cmt bs_fetch.bs.js)
+ (mode (promote (until-clean) (only bs_fetch.bs.js)))(deps (:inputs  bs_fetch.ast)  (:ast_deps .././src/bs_fetch.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-fetch -cwd ./src %{ast_deps}) (run bsc -I .    -w a -bs-package-name bs-fetch -bs-package-output es6:./src:.bs.js -o bs_fetch.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch__Iterator.ast)
+ (deps (:inputs  Fetch__Iterator.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch__Iterator.iast)
+ (deps (:inputs  Fetch__Iterator.mli) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch__Iterator.cmi Fetch__Iterator.cmti)
+ (deps (:inputs  Fetch__Iterator.iast)  (:ast_deps .././src/Fetch__Iterator.ast .././src/Fetch__Iterator.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-fetch -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Fetch__Iterator.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Fetch__Iterator.cmj Fetch__Iterator.cmt Fetch__Iterator.bs.js)
+ (mode (promote (until-clean) (only Fetch__Iterator.bs.js)))(deps (:inputs  Fetch__Iterator.ast)  Fetch__Iterator.cmi (:ast_deps .././src/Fetch__Iterator.ast .././src/Fetch__Iterator.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-fetch -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name bs-fetch -bs-package-output es6:./src:.bs.js -o Fetch__Iterator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Fetch__Iterator.bs.js bs_fetch.bs.js Fetch.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/bs-fetch(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/bs-fetch/.melange.eobjs)
+
+(subdir ./node_modules/@glennsl/bs-json/src
+(rule
+(targets  Json.ast)
+ (deps (:inputs  Json.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json.iast)
+ (deps (:inputs  Json.mli) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json.cmi Json.cmti)
+ (deps (:inputs  Json.iast)  (:ast_deps .././src/Json.ast .././src/Json.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Json.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json.cmj Json.cmt Json.bs.js)
+ (mode (promote (until-clean) (only Json.bs.js)))(deps (:inputs  Json.ast)  Json.cmi (:ast_deps .././src/Json.ast .././src/Json.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name @glennsl/bs-json -bs-package-output es6:./src:.bs.js -o Json.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_decode.ast)
+ (deps (:inputs  Json_decode.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_decode.iast)
+ (deps (:inputs  Json_decode.mli) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_decode.cmi Json_decode.cmti)
+ (deps (:inputs  Json_decode.iast)  (:ast_deps .././src/Json_decode.ast .././src/Json_decode.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Json_decode.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_decode.cmj Json_decode.cmt Json_decode.bs.js)
+ (mode (promote (until-clean) (only Json_decode.bs.js)))(deps (:inputs  Json_decode.ast)  Json_decode.cmi (:ast_deps .././src/Json_decode.ast .././src/Json_decode.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name @glennsl/bs-json -bs-package-output es6:./src:.bs.js -o Json_decode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_encode.ast)
+ (deps (:inputs  Json_encode.ml) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_encode.iast)
+ (deps (:inputs  Json_encode.mli) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_encode.cmi Json_encode.cmti)
+ (deps (:inputs  Json_encode.iast)  (:ast_deps .././src/Json_encode.ast .././src/Json_encode.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Json_encode.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Json_encode.cmj Json_encode.cmt Json_encode.bs.js)
+ (mode (promote (until-clean) (only Json_encode.bs.js)))(deps (:inputs  Json_encode.ast)  Json_encode.cmi (:ast_deps .././src/Json_encode.ast .././src/Json_encode.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/@glennsl/bs-json -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name @glennsl/bs-json -bs-package-output es6:./src:.bs.js -o Json_encode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Json_encode.bs.js Json_decode.bs.js Json.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/@glennsl/bs-json(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/@glennsl/bs-json/.melange.eobjs)
+
+(subdir ./node_modules/bs-webapi/src
+(dirs :standard Webapi)
+(rule
+(targets  Webapi.ast)
+ (deps (:inputs  Webapi.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi.cmj Webapi.cmi Webapi.cmt Webapi.bs.js)
+ (mode (promote (until-clean) (only Webapi.bs.js)))(deps (:inputs  Webapi.ast)  (:ast_deps .././src/Webapi.ast ) ../bsconfig.json(alias ../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src %{ast_deps}) (run bsc -bs-re-out -I ./Webapi/Canvas -I ./Webapi/ResizeObserver -I ./Webapi/Dom -I ./Webapi -I . -I ../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src:.bs.js -o Webapi.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Webapi.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/bs-webapi/src/Webapi
+(dirs :standard Canvas ResizeObserver Dom)
+(rule
+(targets  Webapi__Dom.ast)
+ (deps (:inputs  Webapi__Dom.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom.cmj Webapi__Dom.cmi Webapi__Dom.cmt Webapi__Dom.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom.bs.js)))(deps (:inputs  Webapi__Dom.ast)  (:ast_deps ../.././src/Webapi/Webapi__Dom.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Dom.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Url.ast)
+ (deps (:inputs  Webapi__Url.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Url.cmj Webapi__Url.cmi Webapi__Url.cmt Webapi__Url.bs.js)
+ (mode (promote (until-clean) (only Webapi__Url.bs.js)))(deps (:inputs  Webapi__Url.ast)  (:ast_deps ../.././src/Webapi/Webapi__Url.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Url.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Blob.ast)
+ (deps (:inputs  Webapi__Blob.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Blob.cmj Webapi__Blob.cmi Webapi__Blob.cmt Webapi__Blob.bs.js)
+ (mode (promote (until-clean) (only Webapi__Blob.bs.js)))(deps (:inputs  Webapi__Blob.ast)  (:ast_deps ../.././src/Webapi/Webapi__Blob.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Blob.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__File.ast)
+ (deps (:inputs  Webapi__File.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__File.cmj Webapi__File.cmi Webapi__File.cmt Webapi__File.bs.js)
+ (mode (promote (until-clean) (only Webapi__File.bs.js)))(deps (:inputs  Webapi__File.ast)  (:ast_deps ../.././src/Webapi/Webapi__File.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__File.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Base64.ast)
+ (deps (:inputs  Webapi__Base64.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Base64.cmj Webapi__Base64.cmi Webapi__Base64.cmt Webapi__Base64.bs.js)
+ (mode (promote (until-clean) (only Webapi__Base64.bs.js)))(deps (:inputs  Webapi__Base64.ast)  (:ast_deps ../.././src/Webapi/Webapi__Base64.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Base64.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Canvas.ast)
+ (deps (:inputs  Webapi__Canvas.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Canvas.cmj Webapi__Canvas.cmi Webapi__Canvas.cmt Webapi__Canvas.bs.js)
+ (mode (promote (until-clean) (only Webapi__Canvas.bs.js)))(deps (:inputs  Webapi__Canvas.ast)  (:ast_deps ../.././src/Webapi/Webapi__Canvas.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Canvas.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Performance.ast)
+ (deps (:inputs  Webapi__Performance.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Performance.cmj Webapi__Performance.cmi Webapi__Performance.cmt Webapi__Performance.bs.js)
+ (mode (promote (until-clean) (only Webapi__Performance.bs.js)))(deps (:inputs  Webapi__Performance.ast)  (:ast_deps ../.././src/Webapi/Webapi__Performance.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__Performance.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__ReadableStream.ast)
+ (deps (:inputs  Webapi__ReadableStream.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__ReadableStream.cmj Webapi__ReadableStream.cmi Webapi__ReadableStream.cmt Webapi__ReadableStream.bs.js)
+ (mode (promote (until-clean) (only Webapi__ReadableStream.bs.js)))(deps (:inputs  Webapi__ReadableStream.ast)  (:ast_deps ../.././src/Webapi/Webapi__ReadableStream.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__ReadableStream.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__ResizeObserver.ast)
+ (deps (:inputs  Webapi__ResizeObserver.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__ResizeObserver.cmj Webapi__ResizeObserver.cmi Webapi__ResizeObserver.cmt Webapi__ResizeObserver.bs.js)
+ (mode (promote (until-clean) (only Webapi__ResizeObserver.bs.js)))(deps (:inputs  Webapi__ResizeObserver.ast)  (:ast_deps ../.././src/Webapi/Webapi__ResizeObserver.ast ) ../../bsconfig.json(alias ../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi %{ast_deps}) (run bsc -bs-re-out -I ./Canvas -I ./ResizeObserver -I ./Dom -I . -I .. -I ../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi:.bs.js -o Webapi__ResizeObserver.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Webapi__ResizeObserver.bs.js Webapi__ReadableStream.bs.js Webapi__Performance.bs.js Webapi__Canvas.bs.js Webapi__Base64.bs.js Webapi__File.bs.js Webapi__Blob.bs.js Webapi__Url.bs.js Webapi__Dom.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/bs-webapi/src/Webapi/Dom
+(rule
+(targets  Webapi__Dom__Attr.ast)
+ (deps (:inputs  Webapi__Dom__Attr.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Attr.cmj Webapi__Dom__Attr.cmi Webapi__Dom__Attr.cmt Webapi__Dom__Attr.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Attr.bs.js)))(deps (:inputs  Webapi__Dom__Attr.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Attr.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Attr.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Node.ast)
+ (deps (:inputs  Webapi__Dom__Node.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Node.cmj Webapi__Dom__Node.cmi Webapi__Dom__Node.cmt Webapi__Dom__Node.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Node.bs.js)))(deps (:inputs  Webapi__Dom__Node.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Node.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Node.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Text.ast)
+ (deps (:inputs  Webapi__Dom__Text.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Text.cmj Webapi__Dom__Text.cmi Webapi__Dom__Text.cmt Webapi__Dom__Text.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Text.bs.js)))(deps (:inputs  Webapi__Dom__Text.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Text.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Text.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Event.ast)
+ (deps (:inputs  Webapi__Dom__Event.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Event.cmj Webapi__Dom__Event.cmi Webapi__Dom__Event.cmt Webapi__Dom__Event.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Event.bs.js)))(deps (:inputs  Webapi__Dom__Event.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Event.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Event.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Image.ast)
+ (deps (:inputs  Webapi__Dom__Image.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Image.cmj Webapi__Dom__Image.cmi Webapi__Dom__Image.cmt Webapi__Dom__Image.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Image.bs.js)))(deps (:inputs  Webapi__Dom__Image.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Image.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Image.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Range.ast)
+ (deps (:inputs  Webapi__Dom__Range.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Range.cmj Webapi__Dom__Range.cmi Webapi__Dom__Range.cmt Webapi__Dom__Range.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Range.bs.js)))(deps (:inputs  Webapi__Dom__Range.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Range.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Range.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Types.ast)
+ (deps (:inputs  Webapi__Dom__Types.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Types.cmj Webapi__Dom__Types.cmi Webapi__Dom__Types.cmt Webapi__Dom__Types.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Types.bs.js)))(deps (:inputs  Webapi__Dom__Types.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Types.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Types.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Window.ast)
+ (deps (:inputs  Webapi__Dom__Window.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Window.cmj Webapi__Dom__Window.cmi Webapi__Dom__Window.cmt Webapi__Dom__Window.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Window.bs.js)))(deps (:inputs  Webapi__Dom__Window.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Window.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Window.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Comment.ast)
+ (deps (:inputs  Webapi__Dom__Comment.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Comment.cmj Webapi__Dom__Comment.cmi Webapi__Dom__Comment.cmt Webapi__Dom__Comment.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Comment.bs.js)))(deps (:inputs  Webapi__Dom__Comment.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Comment.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Comment.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomRect.ast)
+ (deps (:inputs  Webapi__Dom__DomRect.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomRect.cmj Webapi__Dom__DomRect.cmi Webapi__Dom__DomRect.cmt Webapi__Dom__DomRect.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DomRect.bs.js)))(deps (:inputs  Webapi__Dom__DomRect.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DomRect.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DomRect.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Element.ast)
+ (deps (:inputs  Webapi__Dom__Element.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Element.cmj Webapi__Dom__Element.cmi Webapi__Dom__Element.cmt Webapi__Dom__Element.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Element.bs.js)))(deps (:inputs  Webapi__Dom__Element.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Element.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Element.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__History.ast)
+ (deps (:inputs  Webapi__Dom__History.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__History.cmj Webapi__Dom__History.cmi Webapi__Dom__History.cmt Webapi__Dom__History.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__History.bs.js)))(deps (:inputs  Webapi__Dom__History.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__History.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__History.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__UiEvent.ast)
+ (deps (:inputs  Webapi__Dom__UiEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__UiEvent.cmj Webapi__Dom__UiEvent.cmi Webapi__Dom__UiEvent.cmt Webapi__Dom__UiEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__UiEvent.bs.js)))(deps (:inputs  Webapi__Dom__UiEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__UiEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__UiEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Document.ast)
+ (deps (:inputs  Webapi__Dom__Document.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Document.cmj Webapi__Dom__Document.cmi Webapi__Dom__Document.cmt Webapi__Dom__Document.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Document.bs.js)))(deps (:inputs  Webapi__Dom__Document.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Document.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Document.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Location.ast)
+ (deps (:inputs  Webapi__Dom__Location.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Location.cmj Webapi__Dom__Location.cmi Webapi__Dom__Location.cmt Webapi__Dom__Location.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Location.bs.js)))(deps (:inputs  Webapi__Dom__Location.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Location.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Location.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeList.ast)
+ (deps (:inputs  Webapi__Dom__NodeList.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeList.cmj Webapi__Dom__NodeList.cmi Webapi__Dom__NodeList.cmt Webapi__Dom__NodeList.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NodeList.bs.js)))(deps (:inputs  Webapi__Dom__NodeList.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NodeList.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NodeList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Slotable.ast)
+ (deps (:inputs  Webapi__Dom__Slotable.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Slotable.cmj Webapi__Dom__Slotable.cmi Webapi__Dom__Slotable.cmt Webapi__Dom__Slotable.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Slotable.bs.js)))(deps (:inputs  Webapi__Dom__Slotable.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Slotable.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Slotable.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ChildNode.ast)
+ (deps (:inputs  Webapi__Dom__ChildNode.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ChildNode.cmj Webapi__Dom__ChildNode.cmi Webapi__Dom__ChildNode.cmt Webapi__Dom__ChildNode.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ChildNode.bs.js)))(deps (:inputs  Webapi__Dom__ChildNode.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ChildNode.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ChildNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DragEvent.ast)
+ (deps (:inputs  Webapi__Dom__DragEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DragEvent.cmj Webapi__Dom__DragEvent.cmi Webapi__Dom__DragEvent.cmt Webapi__Dom__DragEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DragEvent.bs.js)))(deps (:inputs  Webapi__Dom__DragEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DragEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DragEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Selection.ast)
+ (deps (:inputs  Webapi__Dom__Selection.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__Selection.cmj Webapi__Dom__Selection.cmi Webapi__Dom__Selection.cmt Webapi__Dom__Selection.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__Selection.bs.js)))(deps (:inputs  Webapi__Dom__Selection.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__Selection.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__Selection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TimeEvent.ast)
+ (deps (:inputs  Webapi__Dom__TimeEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TimeEvent.cmj Webapi__Dom__TimeEvent.cmi Webapi__Dom__TimeEvent.cmt Webapi__Dom__TimeEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__TimeEvent.bs.js)))(deps (:inputs  Webapi__Dom__TimeEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__TimeEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__TimeEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CloseEvent.ast)
+ (deps (:inputs  Webapi__Dom__CloseEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CloseEvent.cmj Webapi__Dom__CloseEvent.cmi Webapi__Dom__CloseEvent.cmt Webapi__Dom__CloseEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CloseEvent.bs.js)))(deps (:inputs  Webapi__Dom__CloseEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CloseEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CloseEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ErrorEvent.ast)
+ (deps (:inputs  Webapi__Dom__ErrorEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ErrorEvent.cmj Webapi__Dom__ErrorEvent.cmi Webapi__Dom__ErrorEvent.cmt Webapi__Dom__ErrorEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ErrorEvent.bs.js)))(deps (:inputs  Webapi__Dom__ErrorEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ErrorEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ErrorEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__FocusEvent.ast)
+ (deps (:inputs  Webapi__Dom__FocusEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__FocusEvent.cmj Webapi__Dom__FocusEvent.cmi Webapi__Dom__FocusEvent.cmt Webapi__Dom__FocusEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__FocusEvent.bs.js)))(deps (:inputs  Webapi__Dom__FocusEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__FocusEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__FocusEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__InputEvent.ast)
+ (deps (:inputs  Webapi__Dom__InputEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__InputEvent.cmj Webapi__Dom__InputEvent.cmi Webapi__Dom__InputEvent.cmt Webapi__Dom__InputEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__InputEvent.bs.js)))(deps (:inputs  Webapi__Dom__InputEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__InputEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__InputEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MouseEvent.ast)
+ (deps (:inputs  Webapi__Dom__MouseEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MouseEvent.cmj Webapi__Dom__MouseEvent.cmi Webapi__Dom__MouseEvent.cmt Webapi__Dom__MouseEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__MouseEvent.bs.js)))(deps (:inputs  Webapi__Dom__MouseEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__MouseEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__MouseEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeFilter.ast)
+ (deps (:inputs  Webapi__Dom__NodeFilter.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeFilter.cmj Webapi__Dom__NodeFilter.cmi Webapi__Dom__NodeFilter.cmt Webapi__Dom__NodeFilter.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NodeFilter.bs.js)))(deps (:inputs  Webapi__Dom__NodeFilter.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NodeFilter.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NodeFilter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ParentNode.ast)
+ (deps (:inputs  Webapi__Dom__ParentNode.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ParentNode.cmj Webapi__Dom__ParentNode.cmi Webapi__Dom__ParentNode.cmt Webapi__Dom__ParentNode.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ParentNode.bs.js)))(deps (:inputs  Webapi__Dom__ParentNode.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ParentNode.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ParentNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ShadowRoot.ast)
+ (deps (:inputs  Webapi__Dom__ShadowRoot.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ShadowRoot.cmj Webapi__Dom__ShadowRoot.cmi Webapi__Dom__ShadowRoot.cmt Webapi__Dom__ShadowRoot.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ShadowRoot.bs.js)))(deps (:inputs  Webapi__Dom__ShadowRoot.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ShadowRoot.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ShadowRoot.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TouchEvent.ast)
+ (deps (:inputs  Webapi__Dom__TouchEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TouchEvent.cmj Webapi__Dom__TouchEvent.cmi Webapi__Dom__TouchEvent.cmt Webapi__Dom__TouchEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__TouchEvent.bs.js)))(deps (:inputs  Webapi__Dom__TouchEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__TouchEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__TouchEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TrackEvent.ast)
+ (deps (:inputs  Webapi__Dom__TrackEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TrackEvent.cmj Webapi__Dom__TrackEvent.cmi Webapi__Dom__TrackEvent.cmt Webapi__Dom__TrackEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__TrackEvent.bs.js)))(deps (:inputs  Webapi__Dom__TrackEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__TrackEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__TrackEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TreeWalker.ast)
+ (deps (:inputs  Webapi__Dom__TreeWalker.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TreeWalker.cmj Webapi__Dom__TreeWalker.cmi Webapi__Dom__TreeWalker.cmt Webapi__Dom__TreeWalker.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__TreeWalker.bs.js)))(deps (:inputs  Webapi__Dom__TreeWalker.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__TreeWalker.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__TreeWalker.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__WheelEvent.ast)
+ (deps (:inputs  Webapi__Dom__WheelEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__WheelEvent.cmj Webapi__Dom__WheelEvent.cmi Webapi__Dom__WheelEvent.cmt Webapi__Dom__WheelEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__WheelEvent.bs.js)))(deps (:inputs  Webapi__Dom__WheelEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__WheelEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__WheelEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CustomEvent.ast)
+ (deps (:inputs  Webapi__Dom__CustomEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CustomEvent.cmj Webapi__Dom__CustomEvent.cmi Webapi__Dom__CustomEvent.cmt Webapi__Dom__CustomEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CustomEvent.bs.js)))(deps (:inputs  Webapi__Dom__CustomEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CustomEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CustomEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__EventTarget.ast)
+ (deps (:inputs  Webapi__Dom__EventTarget.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__EventTarget.cmj Webapi__Dom__EventTarget.cmi Webapi__Dom__EventTarget.cmt Webapi__Dom__EventTarget.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__EventTarget.bs.js)))(deps (:inputs  Webapi__Dom__EventTarget.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__EventTarget.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__EventTarget.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlElement.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlElement.cmj Webapi__Dom__HtmlElement.cmi Webapi__Dom__HtmlElement.cmt Webapi__Dom__HtmlElement.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlElement.bs.js)))(deps (:inputs  Webapi__Dom__HtmlElement.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlElement.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CdataSection.ast)
+ (deps (:inputs  Webapi__Dom__CdataSection.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CdataSection.cmj Webapi__Dom__CdataSection.cmi Webapi__Dom__CdataSection.cmt Webapi__Dom__CdataSection.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CdataSection.bs.js)))(deps (:inputs  Webapi__Dom__CdataSection.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CdataSection.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CdataSection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentType.ast)
+ (deps (:inputs  Webapi__Dom__DocumentType.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentType.cmj Webapi__Dom__DocumentType.cmi Webapi__Dom__DocumentType.cmt Webapi__Dom__DocumentType.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DocumentType.bs.js)))(deps (:inputs  Webapi__Dom__DocumentType.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DocumentType.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DocumentType.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomStringMap.ast)
+ (deps (:inputs  Webapi__Dom__DomStringMap.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomStringMap.cmj Webapi__Dom__DomStringMap.cmi Webapi__Dom__DomStringMap.cmt Webapi__Dom__DomStringMap.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DomStringMap.bs.js)))(deps (:inputs  Webapi__Dom__DomStringMap.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DomStringMap.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DomStringMap.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomTokenList.ast)
+ (deps (:inputs  Webapi__Dom__DomTokenList.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomTokenList.cmj Webapi__Dom__DomTokenList.cmi Webapi__Dom__DomTokenList.cmt Webapi__Dom__DomTokenList.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DomTokenList.bs.js)))(deps (:inputs  Webapi__Dom__DomTokenList.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DomTokenList.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DomTokenList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlDocument.ast)
+ (deps (:inputs  Webapi__Dom__HtmlDocument.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlDocument.cmj Webapi__Dom__HtmlDocument.cmi Webapi__Dom__HtmlDocument.cmt Webapi__Dom__HtmlDocument.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlDocument.bs.js)))(deps (:inputs  Webapi__Dom__HtmlDocument.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlDocument.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlDocument.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NamedNodeMap.ast)
+ (deps (:inputs  Webapi__Dom__NamedNodeMap.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NamedNodeMap.cmj Webapi__Dom__NamedNodeMap.cmi Webapi__Dom__NamedNodeMap.cmt Webapi__Dom__NamedNodeMap.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NamedNodeMap.bs.js)))(deps (:inputs  Webapi__Dom__NamedNodeMap.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NamedNodeMap.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NamedNodeMap.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeIterator.ast)
+ (deps (:inputs  Webapi__Dom__NodeIterator.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NodeIterator.cmj Webapi__Dom__NodeIterator.cmi Webapi__Dom__NodeIterator.cmt Webapi__Dom__NodeIterator.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NodeIterator.bs.js)))(deps (:inputs  Webapi__Dom__NodeIterator.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NodeIterator.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NodeIterator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PointerEvent.ast)
+ (deps (:inputs  Webapi__Dom__PointerEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PointerEvent.cmj Webapi__Dom__PointerEvent.cmi Webapi__Dom__PointerEvent.cmt Webapi__Dom__PointerEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__PointerEvent.bs.js)))(deps (:inputs  Webapi__Dom__PointerEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__PointerEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__PointerEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__RelatedEvent.ast)
+ (deps (:inputs  Webapi__Dom__RelatedEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__RelatedEvent.cmj Webapi__Dom__RelatedEvent.cmi Webapi__Dom__RelatedEvent.cmt Webapi__Dom__RelatedEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__RelatedEvent.bs.js)))(deps (:inputs  Webapi__Dom__RelatedEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__RelatedEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__RelatedEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__StorageEvent.ast)
+ (deps (:inputs  Webapi__Dom__StorageEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__StorageEvent.cmj Webapi__Dom__StorageEvent.cmi Webapi__Dom__StorageEvent.cmt Webapi__Dom__StorageEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__StorageEvent.bs.js)))(deps (:inputs  Webapi__Dom__StorageEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__StorageEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__StorageEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__SvgZoomEvent.ast)
+ (deps (:inputs  Webapi__Dom__SvgZoomEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__SvgZoomEvent.cmj Webapi__Dom__SvgZoomEvent.cmi Webapi__Dom__SvgZoomEvent.cmt Webapi__Dom__SvgZoomEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__SvgZoomEvent.bs.js)))(deps (:inputs  Webapi__Dom__SvgZoomEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__SvgZoomEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__SvgZoomEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CharacterData.ast)
+ (deps (:inputs  Webapi__Dom__CharacterData.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CharacterData.cmj Webapi__Dom__CharacterData.cmi Webapi__Dom__CharacterData.cmt Webapi__Dom__CharacterData.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CharacterData.bs.js)))(deps (:inputs  Webapi__Dom__CharacterData.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CharacterData.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CharacterData.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__KeyboardEvent.ast)
+ (deps (:inputs  Webapi__Dom__KeyboardEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__KeyboardEvent.cmj Webapi__Dom__KeyboardEvent.cmi Webapi__Dom__KeyboardEvent.cmt Webapi__Dom__KeyboardEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__KeyboardEvent.bs.js)))(deps (:inputs  Webapi__Dom__KeyboardEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__KeyboardEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__KeyboardEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PopStateEvent.ast)
+ (deps (:inputs  Webapi__Dom__PopStateEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PopStateEvent.cmj Webapi__Dom__PopStateEvent.cmi Webapi__Dom__PopStateEvent.cmt Webapi__Dom__PopStateEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__PopStateEvent.bs.js)))(deps (:inputs  Webapi__Dom__PopStateEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__PopStateEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__PopStateEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ProgressEvent.ast)
+ (deps (:inputs  Webapi__Dom__ProgressEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ProgressEvent.cmj Webapi__Dom__ProgressEvent.cmi Webapi__Dom__ProgressEvent.cmt Webapi__Dom__ProgressEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ProgressEvent.bs.js)))(deps (:inputs  Webapi__Dom__ProgressEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ProgressEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ProgressEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ValidityState.ast)
+ (deps (:inputs  Webapi__Dom__ValidityState.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ValidityState.cmj Webapi__Dom__ValidityState.cmi Webapi__Dom__ValidityState.cmt Webapi__Dom__ValidityState.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ValidityState.bs.js)))(deps (:inputs  Webapi__Dom__ValidityState.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ValidityState.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ValidityState.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__AnimationEvent.ast)
+ (deps (:inputs  Webapi__Dom__AnimationEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__AnimationEvent.cmj Webapi__Dom__AnimationEvent.cmi Webapi__Dom__AnimationEvent.cmt Webapi__Dom__AnimationEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__AnimationEvent.bs.js)))(deps (:inputs  Webapi__Dom__AnimationEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__AnimationEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__AnimationEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ClipboardEvent.ast)
+ (deps (:inputs  Webapi__Dom__ClipboardEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ClipboardEvent.cmj Webapi__Dom__ClipboardEvent.cmi Webapi__Dom__ClipboardEvent.cmt Webapi__Dom__ClipboardEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ClipboardEvent.bs.js)))(deps (:inputs  Webapi__Dom__ClipboardEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ClipboardEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ClipboardEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlCollection.ast)
+ (deps (:inputs  Webapi__Dom__HtmlCollection.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlCollection.cmj Webapi__Dom__HtmlCollection.cmi Webapi__Dom__HtmlCollection.cmt Webapi__Dom__HtmlCollection.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlCollection.bs.js)))(deps (:inputs  Webapi__Dom__HtmlCollection.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlCollection.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlCollection.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MutationRecord.ast)
+ (deps (:inputs  Webapi__Dom__MutationRecord.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MutationRecord.cmj Webapi__Dom__MutationRecord.cmi Webapi__Dom__MutationRecord.cmt Webapi__Dom__MutationRecord.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__MutationRecord.bs.js)))(deps (:inputs  Webapi__Dom__MutationRecord.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__MutationRecord.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__MutationRecord.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlFormElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlFormElement.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlFormElement.cmj Webapi__Dom__HtmlFormElement.cmi Webapi__Dom__HtmlFormElement.cmt Webapi__Dom__HtmlFormElement.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlFormElement.bs.js)))(deps (:inputs  Webapi__Dom__HtmlFormElement.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlFormElement.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlFormElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TransitionEvent.ast)
+ (deps (:inputs  Webapi__Dom__TransitionEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__TransitionEvent.cmj Webapi__Dom__TransitionEvent.cmi Webapi__Dom__TransitionEvent.cmt Webapi__Dom__TransitionEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__TransitionEvent.bs.js)))(deps (:inputs  Webapi__Dom__TransitionEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__TransitionEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__TransitionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CompositionEvent.ast)
+ (deps (:inputs  Webapi__Dom__CompositionEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CompositionEvent.cmj Webapi__Dom__CompositionEvent.cmi Webapi__Dom__CompositionEvent.cmt Webapi__Dom__CompositionEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CompositionEvent.bs.js)))(deps (:inputs  Webapi__Dom__CompositionEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CompositionEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CompositionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentFragment.ast)
+ (deps (:inputs  Webapi__Dom__DocumentFragment.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentFragment.cmj Webapi__Dom__DocumentFragment.cmi Webapi__Dom__DocumentFragment.cmt Webapi__Dom__DocumentFragment.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DocumentFragment.bs.js)))(deps (:inputs  Webapi__Dom__DocumentFragment.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DocumentFragment.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DocumentFragment.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlImageElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlImageElement.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlImageElement.cmj Webapi__Dom__HtmlImageElement.cmi Webapi__Dom__HtmlImageElement.cmt Webapi__Dom__HtmlImageElement.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlImageElement.bs.js)))(deps (:inputs  Webapi__Dom__HtmlImageElement.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlImageElement.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlImageElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlInputElement.ast)
+ (deps (:inputs  Webapi__Dom__HtmlInputElement.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__HtmlInputElement.cmj Webapi__Dom__HtmlInputElement.cmi Webapi__Dom__HtmlInputElement.cmt Webapi__Dom__HtmlInputElement.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__HtmlInputElement.bs.js)))(deps (:inputs  Webapi__Dom__HtmlInputElement.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__HtmlInputElement.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__HtmlInputElement.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MutationObserver.ast)
+ (deps (:inputs  Webapi__Dom__MutationObserver.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__MutationObserver.cmj Webapi__Dom__MutationObserver.cmi Webapi__Dom__MutationObserver.cmt Webapi__Dom__MutationObserver.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__MutationObserver.bs.js)))(deps (:inputs  Webapi__Dom__MutationObserver.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__MutationObserver.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__MutationObserver.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__BeforeUnloadEvent.ast)
+ (deps (:inputs  Webapi__Dom__BeforeUnloadEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__BeforeUnloadEvent.cmj Webapi__Dom__BeforeUnloadEvent.cmi Webapi__Dom__BeforeUnloadEvent.cmt Webapi__Dom__BeforeUnloadEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__BeforeUnloadEvent.bs.js)))(deps (:inputs  Webapi__Dom__BeforeUnloadEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__BeforeUnloadEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__BeforeUnloadEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomImplementation.ast)
+ (deps (:inputs  Webapi__Dom__DomImplementation.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DomImplementation.cmj Webapi__Dom__DomImplementation.cmi Webapi__Dom__DomImplementation.cmt Webapi__Dom__DomImplementation.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DomImplementation.bs.js)))(deps (:inputs  Webapi__Dom__DomImplementation.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DomImplementation.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DomImplementation.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__WebGlContextEvent.ast)
+ (deps (:inputs  Webapi__Dom__WebGlContextEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__WebGlContextEvent.cmj Webapi__Dom__WebGlContextEvent.cmi Webapi__Dom__WebGlContextEvent.cmt Webapi__Dom__WebGlContextEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__WebGlContextEvent.bs.js)))(deps (:inputs  Webapi__Dom__WebGlContextEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__WebGlContextEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__WebGlContextEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CssStyleDeclaration.ast)
+ (deps (:inputs  Webapi__Dom__CssStyleDeclaration.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__CssStyleDeclaration.cmj Webapi__Dom__CssStyleDeclaration.cmi Webapi__Dom__CssStyleDeclaration.cmt Webapi__Dom__CssStyleDeclaration.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__CssStyleDeclaration.bs.js)))(deps (:inputs  Webapi__Dom__CssStyleDeclaration.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__CssStyleDeclaration.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__CssStyleDeclaration.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__GlobalEventHandlers.ast)
+ (deps (:inputs  Webapi__Dom__GlobalEventHandlers.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__GlobalEventHandlers.cmj Webapi__Dom__GlobalEventHandlers.cmi Webapi__Dom__GlobalEventHandlers.cmt Webapi__Dom__GlobalEventHandlers.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__GlobalEventHandlers.bs.js)))(deps (:inputs  Webapi__Dom__GlobalEventHandlers.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__GlobalEventHandlers.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__GlobalEventHandlers.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PageTransitionEvent.ast)
+ (deps (:inputs  Webapi__Dom__PageTransitionEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__PageTransitionEvent.cmj Webapi__Dom__PageTransitionEvent.cmi Webapi__Dom__PageTransitionEvent.cmt Webapi__Dom__PageTransitionEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__PageTransitionEvent.bs.js)))(deps (:inputs  Webapi__Dom__PageTransitionEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__PageTransitionEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__PageTransitionEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentOrShadowRoot.ast)
+ (deps (:inputs  Webapi__Dom__DocumentOrShadowRoot.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__DocumentOrShadowRoot.cmj Webapi__Dom__DocumentOrShadowRoot.cmi Webapi__Dom__DocumentOrShadowRoot.cmt Webapi__Dom__DocumentOrShadowRoot.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__DocumentOrShadowRoot.bs.js)))(deps (:inputs  Webapi__Dom__DocumentOrShadowRoot.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__DocumentOrShadowRoot.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__DocumentOrShadowRoot.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NonElementParentNode.ast)
+ (deps (:inputs  Webapi__Dom__NonElementParentNode.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NonElementParentNode.cmj Webapi__Dom__NonElementParentNode.cmi Webapi__Dom__NonElementParentNode.cmt Webapi__Dom__NonElementParentNode.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NonElementParentNode.bs.js)))(deps (:inputs  Webapi__Dom__NonElementParentNode.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NonElementParentNode.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NonElementParentNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__IdbVersionChangeEvent.ast)
+ (deps (:inputs  Webapi__Dom__IdbVersionChangeEvent.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__IdbVersionChangeEvent.cmj Webapi__Dom__IdbVersionChangeEvent.cmi Webapi__Dom__IdbVersionChangeEvent.cmt Webapi__Dom__IdbVersionChangeEvent.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__IdbVersionChangeEvent.bs.js)))(deps (:inputs  Webapi__Dom__IdbVersionChangeEvent.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__IdbVersionChangeEvent.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__IdbVersionChangeEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ProcessingInstruction.ast)
+ (deps (:inputs  Webapi__Dom__ProcessingInstruction.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__ProcessingInstruction.cmj Webapi__Dom__ProcessingInstruction.cmi Webapi__Dom__ProcessingInstruction.cmt Webapi__Dom__ProcessingInstruction.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__ProcessingInstruction.bs.js)))(deps (:inputs  Webapi__Dom__ProcessingInstruction.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__ProcessingInstruction.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__ProcessingInstruction.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NonDocumentTypeChildNode.ast)
+ (deps (:inputs  Webapi__Dom__NonDocumentTypeChildNode.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Dom__NonDocumentTypeChildNode.cmj Webapi__Dom__NonDocumentTypeChildNode.cmi Webapi__Dom__NonDocumentTypeChildNode.cmt Webapi__Dom__NonDocumentTypeChildNode.bs.js)
+ (mode (promote (until-clean) (only Webapi__Dom__NonDocumentTypeChildNode.bs.js)))(deps (:inputs  Webapi__Dom__NonDocumentTypeChildNode.ast)  (:ast_deps ../../.././src/Webapi/Dom/Webapi__Dom__NonDocumentTypeChildNode.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Dom %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I ../ResizeObserver -I . -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Dom:.bs.js -o Webapi__Dom__NonDocumentTypeChildNode.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Webapi__Dom__NonDocumentTypeChildNode.bs.js Webapi__Dom__ProcessingInstruction.bs.js Webapi__Dom__IdbVersionChangeEvent.bs.js Webapi__Dom__NonElementParentNode.bs.js Webapi__Dom__DocumentOrShadowRoot.bs.js Webapi__Dom__PageTransitionEvent.bs.js Webapi__Dom__GlobalEventHandlers.bs.js Webapi__Dom__CssStyleDeclaration.bs.js Webapi__Dom__WebGlContextEvent.bs.js Webapi__Dom__DomImplementation.bs.js Webapi__Dom__BeforeUnloadEvent.bs.js Webapi__Dom__MutationObserver.bs.js Webapi__Dom__HtmlInputElement.bs.js Webapi__Dom__HtmlImageElement.bs.js Webapi__Dom__DocumentFragment.bs.js Webapi__Dom__CompositionEvent.bs.js Webapi__Dom__TransitionEvent.bs.js Webapi__Dom__HtmlFormElement.bs.js Webapi__Dom__MutationRecord.bs.js Webapi__Dom__HtmlCollection.bs.js Webapi__Dom__ClipboardEvent.bs.js Webapi__Dom__AnimationEvent.bs.js Webapi__Dom__ValidityState.bs.js Webapi__Dom__ProgressEvent.bs.js Webapi__Dom__PopStateEvent.bs.js Webapi__Dom__KeyboardEvent.bs.js Webapi__Dom__CharacterData.bs.js Webapi__Dom__SvgZoomEvent.bs.js Webapi__Dom__StorageEvent.bs.js Webapi__Dom__RelatedEvent.bs.js Webapi__Dom__PointerEvent.bs.js Webapi__Dom__NodeIterator.bs.js Webapi__Dom__NamedNodeMap.bs.js Webapi__Dom__HtmlDocument.bs.js Webapi__Dom__DomTokenList.bs.js Webapi__Dom__DomStringMap.bs.js Webapi__Dom__DocumentType.bs.js Webapi__Dom__CdataSection.bs.js Webapi__Dom__HtmlElement.bs.js Webapi__Dom__EventTarget.bs.js Webapi__Dom__CustomEvent.bs.js Webapi__Dom__WheelEvent.bs.js Webapi__Dom__TreeWalker.bs.js Webapi__Dom__TrackEvent.bs.js Webapi__Dom__TouchEvent.bs.js Webapi__Dom__ShadowRoot.bs.js Webapi__Dom__ParentNode.bs.js Webapi__Dom__NodeFilter.bs.js Webapi__Dom__MouseEvent.bs.js Webapi__Dom__InputEvent.bs.js Webapi__Dom__FocusEvent.bs.js Webapi__Dom__ErrorEvent.bs.js Webapi__Dom__CloseEvent.bs.js Webapi__Dom__TimeEvent.bs.js Webapi__Dom__Selection.bs.js Webapi__Dom__DragEvent.bs.js Webapi__Dom__ChildNode.bs.js Webapi__Dom__Slotable.bs.js Webapi__Dom__NodeList.bs.js Webapi__Dom__Location.bs.js Webapi__Dom__Document.bs.js Webapi__Dom__UiEvent.bs.js Webapi__Dom__History.bs.js Webapi__Dom__Element.bs.js Webapi__Dom__DomRect.bs.js Webapi__Dom__Comment.bs.js Webapi__Dom__Window.bs.js Webapi__Dom__Types.bs.js Webapi__Dom__Range.bs.js Webapi__Dom__Image.bs.js Webapi__Dom__Event.bs.js Webapi__Dom__Text.bs.js Webapi__Dom__Node.bs.js Webapi__Dom__Attr.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/bs-webapi/src/Webapi/ResizeObserver
+(rule
+(targets  Webapi__ResizeObserver__ResizeObserverEntry.ast)
+ (deps (:inputs  Webapi__ResizeObserver__ResizeObserverEntry.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__ResizeObserver__ResizeObserverEntry.cmj Webapi__ResizeObserver__ResizeObserverEntry.cmi Webapi__ResizeObserver__ResizeObserverEntry.cmt Webapi__ResizeObserver__ResizeObserverEntry.bs.js)
+ (mode (promote (until-clean) (only Webapi__ResizeObserver__ResizeObserverEntry.bs.js)))(deps (:inputs  Webapi__ResizeObserver__ResizeObserverEntry.ast)  (:ast_deps ../../.././src/Webapi/ResizeObserver/Webapi__ResizeObserver__ResizeObserverEntry.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/ResizeObserver %{ast_deps}) (run bsc -bs-re-out -I ../Canvas -I . -I ../Dom -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/ResizeObserver:.bs.js -o Webapi__ResizeObserver__ResizeObserverEntry.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Webapi__ResizeObserver__ResizeObserverEntry.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/bs-webapi/src/Webapi/Canvas
+(rule
+(targets  Webapi__Canvas__WebGl.ast)
+ (deps (:inputs  Webapi__Canvas__WebGl.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Canvas__WebGl.cmj Webapi__Canvas__WebGl.cmi Webapi__Canvas__WebGl.cmt Webapi__Canvas__WebGl.bs.js)
+ (mode (promote (until-clean) (only Webapi__Canvas__WebGl.bs.js)))(deps (:inputs  Webapi__Canvas__WebGl.ast)  (:ast_deps ../../.././src/Webapi/Canvas/Webapi__Canvas__WebGl.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Canvas %{ast_deps}) (run bsc -bs-re-out -I . -I ../ResizeObserver -I ../Dom -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Canvas:.bs.js -o Webapi__Canvas__WebGl.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Canvas__Canvas2d.ast)
+ (deps (:inputs  Webapi__Canvas__Canvas2d.re) )
+(action
+ (run bsc  -w a -bs-no-version-header -bs-super-errors -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Webapi__Canvas__Canvas2d.cmj Webapi__Canvas__Canvas2d.cmi Webapi__Canvas__Canvas2d.cmt Webapi__Canvas__Canvas2d.bs.js)
+ (mode (promote (until-clean) (only Webapi__Canvas__Canvas2d.bs.js)))(deps (:inputs  Webapi__Canvas__Canvas2d.ast)  (:ast_deps ../../.././src/Webapi/Canvas/Webapi__Canvas__Canvas2d.ast ) ../../../bsconfig.json(alias ../../../../bs-fetch/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news/node_modules/bs-webapi -cwd ./src/Webapi/Canvas %{ast_deps}) (run bsc -bs-re-out -I . -I ../ResizeObserver -I ../Dom -I .. -I ../.. -I ../../../../bs-fetch/src   -w a -bs-package-name bs-webapi -bs-package-output es6:./src/Webapi/Canvas:.bs.js -o Webapi__Canvas__Canvas2d.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Webapi__Canvas__Canvas2d.bs.js Webapi__Canvas__WebGl.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/bs-webapi(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/bs-webapi/.melange.eobjs)
+
+(subdir ./src/bindings
+(rule
+(targets  ReactDomExperimental.ast)
+ (deps (:inputs  ReactDomExperimental.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDomExperimental.iast)
+ (deps (:inputs  ReactDomExperimental.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDomExperimental.cmi ReactDomExperimental.cmti)
+ (deps (:inputs  ReactDomExperimental.iast)  (:ast_deps ../.././src/bindings/ReactDomExperimental.ast ../.././src/bindings/ReactDomExperimental.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/bs-fetch/src/bsb_world)(alias ../../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../../node_modules/bs-webapi/src/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src/bindings %{ast_deps}) (run bsc -I .. -I . -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/bs-fetch/src -I ../../node_modules/@glennsl/bs-json/src -I ../../node_modules/bs-webapi/src -I ../../node_modules/bs-webapi/src/Webapi -I ../../node_modules/bs-webapi/src/Webapi/Dom -I ../../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../../node_modules/bs-webapi/src/Webapi/Canvas   -w a -o ReactDomExperimental.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDomExperimental.cmj ReactDomExperimental.cmt ReactDomExperimental.bs.js)
+ (mode (promote (until-clean) (only ReactDomExperimental.bs.js)))(deps (:inputs  ReactDomExperimental.ast)  ReactDomExperimental.cmi (:ast_deps ../.././src/bindings/ReactDomExperimental.ast ../.././src/bindings/ReactDomExperimental.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/bs-fetch/src/bsb_world)(alias ../../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../../node_modules/bs-webapi/src/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src/bindings %{ast_deps}) (run bsc -bs-read-cmi -I .. -I . -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/bs-fetch/src -I ../../node_modules/@glennsl/bs-json/src -I ../../node_modules/bs-webapi/src -I ../../node_modules/bs-webapi/src/Webapi -I ../../node_modules/bs-webapi/src/Webapi/Dom -I ../../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src/bindings:.bs.js -o ReactDomExperimental.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReactDomExperimental.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./src
+(rule
+(targets  App.ast)
+ (deps (:inputs  App.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  App.cmj App.cmi App.cmt App.bs.js)
+ (mode (promote (until-clean) (only App.bs.js)))(deps (:inputs  App.ast)  (:ast_deps .././src/App.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o App.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.ast)
+ (deps (:inputs  Link.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.cmj Link.cmi Link.cmt Link.bs.js)
+ (mode (promote (until-clean) (only Link.bs.js)))(deps (:inputs  Link.ast)  (:ast_deps .././src/Link.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o Link.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Index.ast)
+ (deps (:inputs  Index.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Index.cmj Index.cmi Index.cmt Index.bs.js)
+ (mode (promote (until-clean) (only Index.bs.js)))(deps (:inputs  Index.ast)  (:ast_deps .././src/Index.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o Index.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Utils.ast)
+ (deps (:inputs  Utils.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Utils.cmj Utils.cmi Utils.cmt Utils.bs.js)
+ (mode (promote (until-clean) (only Utils.bs.js)))(deps (:inputs  Utils.ast)  (:ast_deps .././src/Utils.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o Utils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  NotFound.ast)
+ (deps (:inputs  NotFound.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  NotFound.cmj NotFound.cmi NotFound.cmt NotFound.bs.js)
+ (mode (promote (until-clean) (only NotFound.bs.js)))(deps (:inputs  NotFound.ast)  (:ast_deps .././src/NotFound.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o NotFound.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  StoryData.ast)
+ (deps (:inputs  StoryData.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  StoryData.cmj StoryData.cmi StoryData.cmt StoryData.bs.js)
+ (mode (promote (until-clean) (only StoryData.bs.js)))(deps (:inputs  StoryData.ast)  (:ast_deps .././src/StoryData.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o StoryData.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CommentList.ast)
+ (deps (:inputs  CommentList.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CommentList.cmj CommentList.cmi CommentList.cmt CommentList.bs.js)
+ (mode (promote (until-clean) (only CommentList.bs.js)))(deps (:inputs  CommentList.ast)  (:ast_deps .././src/CommentList.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o CommentList.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CommentsPage.ast)
+ (deps (:inputs  CommentsPage.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CommentsPage.cmj CommentsPage.cmi CommentsPage.cmt CommentsPage.bs.js)
+ (mode (promote (until-clean) (only CommentsPage.bs.js)))(deps (:inputs  CommentsPage.ast)  (:ast_deps .././src/CommentsPage.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o CommentsPage.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  StoryListItem.ast)
+ (deps (:inputs  StoryListItem.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  StoryListItem.cmj StoryListItem.cmi StoryListItem.cmt StoryListItem.bs.js)
+ (mode (promote (until-clean) (only StoryListItem.bs.js)))(deps (:inputs  StoryListItem.ast)  (:ast_deps .././src/StoryListItem.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o StoryListItem.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  TopStoriesPage.ast)
+ (deps (:inputs  TopStoriesPage.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  TopStoriesPage.cmj TopStoriesPage.cmi TopStoriesPage.cmt TopStoriesPage.bs.js)
+ (mode (promote (until-clean) (only TopStoriesPage.bs.js)))(deps (:inputs  TopStoriesPage.ast)  (:ast_deps .././src/TopStoriesPage.ast ) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/bs-fetch/src/bsb_world)(alias ../node_modules/@glennsl/bs-json/src/bsb_world)(alias ../node_modules/bs-webapi/src/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Dom/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/ResizeObserver/bsb_world)(alias ../node_modules/bs-webapi/src/Webapi/Canvas/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-melange-hacker-news -cwd ./src %{ast_deps}) (run bsc -I . -I ./bindings -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/bs-fetch/src -I ../node_modules/@glennsl/bs-json/src -I ../node_modules/bs-webapi/src -I ../node_modules/bs-webapi/src/Webapi -I ../node_modules/bs-webapi/src/Webapi/Dom -I ../node_modules/bs-webapi/src/Webapi/ResizeObserver -I ../node_modules/bs-webapi/src/Webapi/Canvas   -w a -bs-package-name rescript-melange-hacker-news -bs-package-output es6:./src:.bs.js -o TopStoriesPage.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  TopStoriesPage.bs.js StoryListItem.bs.js CommentsPage.bs.js CommentList.bs.js StoryData.bs.js NotFound.bs.js Utils.bs.js Index.bs.js Link.bs.js App.bs.js)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir .melange.eobjs)
+
+(data_only_dirs node_modules .melange.eobjs)
+(alias (name bsb_world))
+;;;;BSB GENERATED: NO EDIT}
