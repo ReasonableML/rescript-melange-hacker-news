@@ -10,11 +10,11 @@
     "dev": "webpack-dev-server",
     "static": "node scripts/serveStatic.js",
     "bsb-watch": "esy dune build @fmt --auto-promote -w",
-    "build": "esy bsb -make-world && webpack  && cp -av public/* dist",
+    "build-static": "esy bsb -make-world && webpack  && cp -av public/* dist",
     "bsb-build": "esy bsb -make-world",
     "upload": "./s3_upload.sh",
     "postinstall": "esy",
-    "analyze": "NODE_ENV=analyze yarn build; analyze-bundle -b dist/build/main.js -s dist/build/stats.json",
+    "analyze": "NODE_ENV=analyze yarn build-static; analyze-bundle -b dist/build/main.js -s dist/build/stats.json",
     "clean": "esy bsb -clean-world"
   },
   "keywords": [],
