@@ -1,7 +1,6 @@
 open Utils
 
-// [%bs.raw {| require('./src/CommentsPage.css') |}];
-%%raw(`import './CommentsPage.css';`)
+requireCSS("src/CommentsPage.css")
 type state = {story_with_comments: option<StoryData.story_with_comments>}
 
 type action = Loaded(StoryData.story_with_comments)

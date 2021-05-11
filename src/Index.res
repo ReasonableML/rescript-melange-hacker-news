@@ -1,8 +1,9 @@
 open ReactDomExperimental
-open Utils;
 
+open Utils
 registerServiceWorker();
-%%raw(`import './Index.css';`)
+requireCSS("src/Index.css")
+
 
 switch createRootWithId("root") {
 | Some(root) => root->render(

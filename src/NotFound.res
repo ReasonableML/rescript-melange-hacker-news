@@ -1,8 +1,7 @@
 open Utils
 
-%%raw(`import './NotFound.css';`)
-
-let notFoundImage = %raw(`require("./notfound404.png")`)
+requireCSS("src/NotFound.css")
+let notFoundImage = requireAssetURI("src/notfound404.png");
 @react.component
 let make = () =>
   <div className="NotFound_container">

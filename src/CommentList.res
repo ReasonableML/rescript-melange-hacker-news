@@ -2,9 +2,9 @@ open Belt
 
 open Utils
 
-%%raw(`import './CommentList.css';`)
-let disclosure = %raw(`require("./disclosure.png")`)
-let disclosure90 = %raw(`require("./disclosure90.png")`)
+requireCSS("src/CommentList.css")
+let disclosure = requireAssetURI("src/disclosure.png");
+let disclosure90 = requireAssetURI("src/disclosure90.png");
 type action = Toggle(option<string>)
 
 type state = {collapsed_comments: Set.Int.t}

@@ -6,10 +6,10 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=production yarn build",
-    "start": "esy bsb -clean-world;esy bsb -make-world | yarn run dev",
+    "start": "yarn run bsb-watch",
     "dev": "webpack-dev-server",
     "static": "node scripts/serveStatic.js",
-    "bsb-watch": "bsb -make-world -w",
+    "bsb-watch": "esy dune build @fmt --auto-promote -w",
     "build": "esy bsb -make-world && webpack  && cp -av public/* dist",
     "bsb-build": "esy bsb -make-world",
     "upload": "./s3_upload.sh",

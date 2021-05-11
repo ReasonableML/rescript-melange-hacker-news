@@ -19,8 +19,9 @@ const useClosureCompiler = process.env.CLOSURE === '1';
 let publicUrl = '';
 
 module.exports = {
+  mode: dev ? 'development' : 'production',
   context: __dirname,
-  entry: useRollup ? './src/Index.bs' : './src/Index.bs',
+  entry: useRollup ? './src/Index' : './_build/default/src/Index.js',
   output: {
     filename: '[name].js',
     path: path.join(__dirname, './dist/build'),
@@ -85,7 +86,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(!dev ? 'production' : null),
+        NODE_ENV: JSON.stringify(!dev ? 'production' : 'development'),
         PUBLIC_URL: JSON.stringify(publicUrl + '/build'),
       },
     }),

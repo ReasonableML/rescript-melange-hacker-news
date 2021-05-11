@@ -1,9 +1,8 @@
 open Utils
 
-%%raw(`import './StoryListItem.css';`)
-let commentIcon = %raw(`require("./comment.png")`)
-// let commentIcon = requireAssetURI("src/comment.png");
-// [@bs.module("./comment.png") ]external commentIcon: string = "default"
+requireCSS("src/StoryListItem.css")
+
+let commentIcon = requireAssetURI("src/comment.png");
 
 @react.component
 let make = (~story: StoryData.story, ~index: int, ()) => {

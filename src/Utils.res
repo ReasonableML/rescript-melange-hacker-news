@@ -31,4 +31,4 @@ let distanceFromBottom: unit => int = () => {
 }
 
 @module
-external registerServiceWorker: unit => unit = "./registerServiceWorker"
+external registerServiceWorker: unit => unit = "src/registerServiceWorker"
