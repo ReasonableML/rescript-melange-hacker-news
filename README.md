@@ -1,7 +1,7 @@
 Rescript React Hacker News Compiled with [Melange](https://github.com/melange-re/melange)
 ===
 
-Hacker News mobile app built with [Rescipt & React](https://rescript-lang.org/docs/react/latest/introduction)
+Hacker News mobile app built with [Rescript & React](https://rescript-lang.org/docs/react/latest/introduction)
 
 See it at https://hackernewsmobile.com
 
